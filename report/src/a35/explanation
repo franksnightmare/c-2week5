@@ -1,0 +1,6 @@
+The copy generic algorithm copies a series of elements (the range of
+the iterator) to an output range (destination).
+
+The for_each generic algorithm passes a series of elements (the range
+of the iterator) as reference to a function that may modify the
+series of elements.
