@@ -1,6 +1,9 @@
 The copy generic algorithm copies a series of elements (the range of
-the iterator) to an output range (destination).
+the iterator) to an output range (destination). In the example a series of elements are copied to a vector
+with an existing element already in it. The for_each algorithm is not prefereed, because it needs a function
+to perform the copy operation. The copy algorithm does it in 1 line of code, so is strongly preferred over the
+for_each algorithm.
 
 The for_each generic algorithm passes a series of elements (the range
 of the iterator) as reference to a function that may modify the
-series of elements.
+series of elements. The copy algorithm is unable to modify the elements, so for_each must be used.
