@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+
+\usepackage{times}
+\usepackage[english]{babel}
+
+% -----------------------------------------------
+% especially use this for you code
+% -----------------------------------------------
+
+\usepackage{courier}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+\definecolor{Gray}{gray}{0.95}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{language=C++,
+	basicstyle = \normalsize\ttfamily,   % the size and fonts that are used
+	tabsize = 2,                    % sets default tabsize
+	breaklines = true,              % sets automatic line breaking
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	commentstyle=\color{mygreen}\ttfamily,
+	numbers=left,
+	keepspaces=true,
+	showspaces=false,
+	showstringspaces=false,
+}
+
+\begin{document}
+
+\title{Programming in C/C++ \\
+       Exercises set five: STL and GA
+}
+\date{\today}
+\author{Christiaan Steenkist \\
+Jaime Betancor Valado \\
+Remco Bos \\
+}
+
+\maketitle
+
+\section*{Exercise 31, Extracting lines with GAs}
+We extracted lines from an input stream by using \texttt{copy}, \texttt{input\_iterator}s and a custom Line class.
+
+There is already an overloaded string extraction operator that we would not be overloading again.
+That extraction operator stops extracting at a whitespace which means it does not do what we want it to do.
+
+\subsection*{Code listing}
+\lstinputlisting[caption = main.cc]{src/a31/main.cc}
+
+\section*{Exercise 32, You get a promotion!}
+We used sort to sort in two cool sorting ways, with promotion!
+
+\subsection*{Code listing}
+\lstinputlisting[caption = main.cc]{src/a32/main.cc}
+
+\section*{Exercise 33, Lambda functions}
+Lambda functions are used in this program that (currently) counts vowels.
+
+\subsection*{Output}
+\lstinputlisting[caption = output]{src/a33/output}
+
+\subsection*{Code listings}
+\lstinputlisting[caption = vstring.ih]{src/a33/vstring.ih}
+\lstinputlisting[caption = vstring.h]{src/a33/vstring.h}
+\lstinputlisting[caption = main.cc]{src/a33/main.cc}
+\lstinputlisting[caption = count.cc]{src/a33/count.cc}
+\lstinputlisting[caption = countchar.cc]{src/a33/countchar.cc}
+\lstinputlisting[caption = vowels.cc]{src/a33/vowels.cc}
+\lstinputlisting[caption = vstring.cc]{src/a33/vstring.cc}
+
+\section*{Exercise 34, GA's and one handy trick to remove elements from vectors you WOULDN'T BELIEVE}
+Visit the next page to find out more!
+
+\subsection*{Inputs}
+\lstinputlisting[caption = data]{src/a34/input1}
+\lstinputlisting[caption = extra]{src/a34/input2}
+
+\subsection*{Output}
+\lstinputlisting[caption = output]{src/a34/output}
+
+\subsection*{Code listing}
+\lstinputlisting[caption = main.cc]{src/a34/main.cc}
+
+\subsection*{Exercise 35, Copy and for\_each}
+Here we explain the differences between them.
+
+\subsection*{Answers}
+The copy generic algorithm copies a series of elements (the range of
+the iterator) to an output range (destination).
+
+The for\_each generic algorithm passes a series of elements (the range
+of the iterator) as reference to a function that may modify the
+series of elements.
+
+\subsection*{Code listings}
+\lstinputlisting[caption = copy.cc]{src/a35/copy.cc}
+\lstinputlisting[caption = for\_each.cc]{src/a35/for_each.cc}
+
+\end{document}
